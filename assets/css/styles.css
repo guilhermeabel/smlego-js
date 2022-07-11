@@ -6,6 +6,11 @@
 	--color-hover: #ededed;
 	--color-bg: #ffffff; 
 } */
+
+.sheet{
+	min-height: 300px;
+}
+
 .sheet div{
 	font-size: 94px;
 	font-family: "IBM Plex Mono";
@@ -23,10 +28,24 @@
 	background-color: #FFE800;
 }
 
+.highContrastTheme a {
+	border-color: #000!important;
+	background-color: #FFE800 !important;
+	color: #000!important;
+}
 
-/* #highContrastTheme {
-	-color-secondary: #FFE800;
-	-color-hover: #FFE800;
-	-color-bg: #000; 
-	background-color: -color-bg;
-} */
+.highContrastTheme button {
+	border-color: #000!important;
+	background-color: #FFE800 !important;
+	color: #000!important;
+}
+
+.highContrastTheme {
+	color: #FFE800 !important;
+	background-color: #000!important;
+}
+
+#highContrastBtn {
+	background-color: #FFE800 !important;
+	color: #000!important;
+}

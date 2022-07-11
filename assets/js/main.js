@@ -191,3 +191,12 @@ function clearSheet() {
 function setBpm() {
 	bpm = $("#bpm").val()
 }
+
+
+function toggleTheme() {
+	if ($('body').hasClass("highContrastTheme")) {
+		$('body').removeClass("highContrastTheme")
+	} else {
+		$('body').addClass("highContrastTheme")
+	}
+}
