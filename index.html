@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/b22cad0624.js" crossorigin="anonymous"></script>
+	<title>smlego-js</title>
+</head>
+
+<body>
+	<div class="container mt-5 px-4 px-lg-5">
+		<div class="row gx-4 gx-lg-5 justify-content-center">
+			<div class="col-md-12 col-lg-10 col-xl-8">
+				<div class="title">
+					<h1>smlego-js</h1>
+				</div>
+				<div class="initial-button-group">
+					<p>this is js</p>
+					<button type="button" class="btn btn-primary btn-lg">Ajuda</button>
+					<button type="button" class="btn btn-secondary btn-lg">Alto Contraste</button>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col">
+
+
+						<!-- <input type="text" class="form-control-lg" placeholder="Diretório do arquivo"> -->
+					</div>
+
+				</div>
+				<div class="row mb-4">
+					<div class="col-lg-12">
+						<div class="input-group input-group-lg">
+							<button onclick="getTheFile()" class="btn btn-primary btn-lg" type="submit">Selecionar
+								Arquivo</button>
+
+							<input type="text" class="form-control" placeholder="Nome do arquivo selecionado">
+
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3">
+						<label for="bpm" class="form-label">Seletor de BPM</label>
+						<input type="number" class="form-control form-control-lg" onchange="setBpm()" id="bpm" min="33"
+							max="240">
+					</div>
+					<div class="col-9">
+						<label class="form-label">Controles</label>
+						<div class="col-12">
+							<button id="play-note" onclick="playNote()" type="button" class="btn btn-success btn-lg">
+								<i class="fa-solid fa-play"></i> Tocar</button>
+							<button id="toggle-metronome" onclick="toggleMetronome()" type="button"
+								class="btn btn-info btn-lg">
+								<i class="fa-solid fa-play"></i> Metrônomo</button>
+							<button id="stop-button" onclick="stop()" type="button" class="btn btn-warning btn-lg">
+								<i class="fa-solid fa-stop"></i> Parar</button>
+							<button id="clear-button" onclick="clearSheet()" type="button"
+								class="btn btn-danger btn-lg">
+								<i class="fa-solid fa-trash"></i> Limpar</button>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row mt-4">
+					<div class="col">
+						<div class="card">
+							<div class="card-body">
+								<div class="row sheet">
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>

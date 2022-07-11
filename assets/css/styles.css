@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+/* :root {
+	--color-primary: #005FB8;
+	--color-secondary: #000;
+	--color-hover: #ededed;
+	--color-bg: #ffffff; 
+} */
+.sheet div{
+	font-size: 94px;
+	font-family: "IBM Plex Mono";
+	border-radius: 8px;
+}
+
+.note{
+	min-height: 80px;
+	min-width: 115px;
+	text-align: center;
+}
+
+
+.highlight{
+	background-color: #FFE800;
+}
+
+
+/* #highContrastTheme {
+	-color-secondary: #FFE800;
+	-color-hover: #FFE800;
+	-color-bg: #000; 
+	background-color: -color-bg;
+} */
