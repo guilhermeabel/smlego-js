@@ -11,52 +11,68 @@
 	<title>smlego-js</title>
 </head>
 
-<body class="">
-	<div class="container mt-5 px-4 px-lg-5">
+<body class="high-contrast-theme">
+	<div class="container pt-5 px-4 px-lg-5 min-vh-100">
 		<div class="row gx-4 gx-lg-5 justify-content-center">
 			<div class="col-md-12 col-lg-10 col-xl-8">
 				<div class="row justify-content-between align-items-center mb-4">
+					<div class="row">
+						<div class="col">
+							<span class="lang-label-language">Idioma</span>:
+							<a onclick="loadLanguage('BR')" class="link"><span
+									class="lang-select-br-btn">Português</span></a>
+							<a onclick="loadLanguage('EN')" class="link"><span
+									class="lang-select-en-btn">Inglês</span></a>
+						</div>
+
+					</div>
+
 					<div class="col">
-						<h1>smlego-js</h1>
+						<h1>SM-LEGO</h1>
 					</div>
 					<div class="col text-end">
-						<a target="_blank" href="assets/pdf/artigo.pdf" role="button"
-							class="btn btn-primary btn-lg">Ajuda</a>
-						<button id="highContrastBtn" onclick="toggleTheme()" type="button"
-							class="btn btn-secondary btn-lg">Alto
-							Contraste</button>
+						<a id="help-btn" target="_blank" href="assets/pdf/artigo.pdf" role="button"
+							class="btn btn-primary btn-lg"><span class="lang-help-btn">Ajuda</span></a>
+						<button id="high-contrast-btn" onclick="toggleTheme()" type="button"
+							class="btn btn-secondary btn-lg"><span class="lang-high-contrast-btn">Alto
+								Contraste</span></button>
+
 					</div>
 				</div>
 
 				<div class="row mb-4">
 					<div class="col-lg-12">
 						<div class="input-group input-group-lg">
-							<button onclick="getTheFile()" class="btn btn-primary btn-lg" type="submit">Selecionar
-								Arquivo</button>
-							<input type="text" class="form-control" placeholder="Nome do arquivo selecionado">
+							<button id="select-file-btn" onclick="getTheFile()" class="btn btn-primary btn-lg"
+								type="submit"><span class="lang-select-file-btn">Selecionar
+									Arquivo</span></button>
+							<input id="file-input-name" type="text" class="form-control"
+								placeholder="Nome do arquivo selecionado">
 
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-3">
-						<label for="bpm" class="form-label"><strong>Seletor de BPM</strong></label>
+						<label for="bpm" class="form-label"><strong><span
+									class="lang-bpm-input">BPM</span></strong></label>
 						<input type="number" class="form-control form-control-lg" onchange="setBpm()" id="bpm" min="33"
 							max="240">
 					</div>
 					<div class="col-9 text-end">
-						<label class="form-label"><strong>Controles</strong></label>
+						<label class="form-label"><strong><span class="lang-controls-label">
+									Controles</span></strong></label>
 						<div class="col-12">
 							<button id="play-note" onclick="playNote()" type="button" class="btn btn-success btn-lg">
-								<i class="fa-solid fa-play"></i> Tocar</button>
+								<i class="fa-solid fa-play"></i> <span class="lang-play-btn">Tocar</span></button>
 							<button id="toggle-metronome" onclick="toggleMetronome()" type="button"
-								class="btn btn-info btn-lg">
-								<i class="fa-solid fa-play"></i> Metrônomo</button>
+								class="btn btn-info btn-lg"> <i class="fa-solid fa-play"></i> <span
+									class="lang-metronome-btn">Metrônomo</span></button>
 							<button id="stop-button" onclick="stop()" type="button" class="btn btn-warning btn-lg">
-								<i class="fa-solid fa-stop"></i> Parar</button>
+								<i class="fa-solid fa-stop"></i> <span class="lang-stop-btn">Parar</span></button>
 							<button id="clear-button" onclick="clearSheet()" type="button"
 								class="btn btn-danger btn-lg">
-								<i class="fa-solid fa-trash"></i> Limpar</button>
+								<i class="fa-solid fa-trash"></i> <span class="lang-clear-btn">Limpar</span></button>
 						</div>
 					</div>
 

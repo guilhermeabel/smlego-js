@@ -1,9 +1,58 @@
+window.WORDS_EN = {
+	"label-language": "Language",
+	"select-br-btn": "Portuguese",
+	"select-en-btn": "English",
+	"help-btn": "Help",
+	"high-contrast-btn": "High Contrast",
+	"select-file-btn": "Select File",
+	"file-input-name": "File Directory",
+	"bpm-input": "BPM",
+	"controls-label": "Controls",
+	"play-btn": "Play",
+	"metronome-btn": "Metronome",
+	"stop-btn": "Stop",
+	"clear-btn": "Clear",
+};
+
+window.WORDS_BR = {
+	"label-language": "Idioma",
+	"select-br-btn": "Português",
+	"select-en-btn": "Inglês",
+	"help-btn": "Ajuda",
+	"high-contrast-btn": "Alto Contraste",
+	"select-file-btn": "Selecionar Arquivo",
+	"file-directory-input": "Diretório do Arquivo",
+	"bpm-input": "BPM",
+	"controls-label": "Controles",
+	"play-btn": "Tocar",
+	"metronome-btn": "Metrônomo",
+	"stop-btn": "Parar",
+	"clear-btn": "Limpar",
+};
+
+
+function init() {
+	loadLanguage("BR");
+}
+
+function loadLanguage(lang) {
+	/*fills all the span tags with class=lang pattern*/
+	$('span[class^="lang"]').each(function () {
+		var LangVar = (this.className).replace('lang-', '');
+		var Text = window["WORDS_" + lang][LangVar];
+		$(this).text(Text);
+	});
+	let fileInputName = $("#file-input-name")
+	fileInputName.attr("placeholder", window["WORDS_" + lang][(fileInputName.attr("id"))])
+}
+
 let bpm = 120;
 let isRunningMetronome = false
 const metronomeClick = new Audio('assets/sounds/metronome.wav');
 const noteClick = new Audio('assets/sounds/note.wav');
-
 $("#bpm").val(bpm)
+
+window.onload = init;
 
 /* FILE PICKER */
 const pickerOpts = {
@@ -194,9 +243,9 @@ function setBpm() {
 
 
 function toggleTheme() {
-	if ($('body').hasClass("highContrastTheme")) {
-		$('body').removeClass("highContrastTheme")
+	if ($('body').hasClass("high-contrast-theme")) {
+		$('body').removeClass("high-contrast-theme")
 	} else {
-		$('body').addClass("highContrastTheme")
+		$('body').addClass("high-contrast-theme")
 	}
 }

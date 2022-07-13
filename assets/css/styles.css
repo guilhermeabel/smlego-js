@@ -28,24 +28,24 @@
 	background-color: #FFE800;
 }
 
-.highContrastTheme a {
+.high-contrast-theme a {
 	border-color: #000!important;
 	background-color: #FFE800 !important;
 	color: #000!important;
 }
 
-.highContrastTheme button {
+.high-contrast-theme button {
 	border-color: #000!important;
 	background-color: #FFE800 !important;
 	color: #000!important;
 }
 
-.highContrastTheme {
+.high-contrast-theme {
 	color: #FFE800 !important;
 	background-color: #000!important;
 }
 
-#highContrastBtn {
+#high-contrast-theme {
 	background-color: #FFE800 !important;
 	color: #000!important;
 }
